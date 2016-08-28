@@ -1,0 +1,44 @@
+The clear CSS property specifies whether an element can be next to floating elements 
+that precede it or must be moved down (cleared) below them.
+
+1. Old School
+  
+  .clear {
+    clear: both;
+  }
+
+  <div class="container">
+    <div class="el-1">I'm floated...</div>
+    <div class="el-2">I'm also floated...</div>
+    <br class="clear">
+  </div>
+
+
+2. Overflow
+
+Using the overflow property on our .container, 
+we can actually force the container to expand to the height of the floated elements. 
+Our CSS will look like this:
+
+.container {
+  overflow: hidden; /* can also be "auto" */
+}
+
+
+3. The clearfix
+
+Uses ::before and ::after
+
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  zoom: 1; /* ie 6/7 */
+}

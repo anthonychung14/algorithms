@@ -1,0 +1,64 @@
+
+
+function countIslands(matrix) {
+  var mRows = matrix.length;
+  var mCols = matrix[0].length;
+  var visitMap = makeMatrix(mRows, mCols)
+
+  var startR, startC, count = 0, q = [], curr
+
+  for (var r = 0; r < mRows; r++) {     
+    for (var c = 0; c < mCols; c++) {       
+      visitMap[r][c] = true
+      curr = matrix[r][c]
+      if (curr === 1 && !visitMap[r][c]) {
+        count++
+        startR = r
+        startC = c
+        BFS(startR, startC)
+      }
+    }   
+  }
+  
+  function BFS(r, c) {
+    var q = [], start
+    q.push([r,c])
+    while (q.length > 0) {
+      start = q.shift()
+      visitMap[start[0]][start[1]] = true          
+      peekAround(start[0], start[1])
+    }
+  }
+
+  function peekAround(r,c) {
+    if(!visitMap[r+1][c] && matrix[r+1][c] === 1) {
+      q.push([r+1, c])
+    }
+    if(!visitMap[r-1][c] && matrix[r-1][c] === 1) {
+      q.push([r-1, c])
+    }
+    if(!visitMap[r][c+1] && matrix[r][c+1] === 1) {
+      q.push([r, c+1])
+    }
+    if(!visitMap[r][c-1] && matrix[r][c-1] === 1) {
+      q.push([r, c-1])
+    }
+  }
+
+  return count
+}
+
+
+function makeMatrix(m, n) {
+  var matrix = []
+  for (var i = 0; i < m; i++) {
+    var subRes = []
+    for (var j = 0; j < n; j++) { 
+      subRes.push(false)
+    }
+    matrix.push(subRes)
+  }
+  return matrix
+}
+
+console.log(makeMatrix(4,5))
