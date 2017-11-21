@@ -6,6 +6,5 @@ arr.forEach( (e,i) => {
   matrix[i] = new Array(arr.length)
 })
 
-
 console.log(matrix)
 

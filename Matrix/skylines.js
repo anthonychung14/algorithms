@@ -21,7 +21,7 @@ function mergeSkylines(skyline1, skyline2) {
       }
       h1 = point1[1]
       skyLine1.pop()
-    
+
     } else if (point2[0] < point1[0]) {
       mergedPoints.push(point2[0])
       mergedPoints.push(point1[1])
@@ -34,7 +34,7 @@ function mergeSkylines(skyline1, skyline2) {
     }
      else {
 
-     } 
+     }
 
 
 
@@ -48,22 +48,22 @@ var smallProblem1 = [ [15, 20, 10], [19, 24, 8] ]
 var problemSet1 = [ [2, 9, 10], [3, 7, 15], [5, 12, 12], [15, 20, 10], [19, 24, 8] ]
 const answer1 = [ [2, 10], [3, 15], [7, 12], [12, 0], [15, 10], [20, 8], [24, 0] ]
 
-function skylineProblem(arrayBuildings) { 
+function skylineProblem(arrayBuildings) {
   // compare key points of skylines starting from leftmost end
   var point1, point2
-  
-  
-  
-  
-  
+
+
+
+
+
   //Choose the one having lesser of x value
-  
+
   //if y is less than the last seen height of other, update key poin's y to last seen height
-  
+
   //Proceed to next key point of the chosen skyline
-  
+
   //Repeat about steps till both skylines done
-  
+
   //remove redundant key points
 
 }

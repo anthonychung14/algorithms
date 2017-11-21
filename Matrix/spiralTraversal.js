@@ -11,6 +11,7 @@ var matrix = [
   // diagramming / framing the problem
 
   // are their variables named something intuitive?
+  // startCol/startRow
 
   // how do they test the logic of their solution?
 

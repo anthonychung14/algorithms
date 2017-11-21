@@ -12,6 +12,7 @@ function countLiberties(board, start) {
   //IF ON AN EMPTY SPACE, RETURN NULL
   var playerColor;
   var enemyColor;
+
   var startZone = board[start[0]][start[1]]
   if(startZone.color === 'empty') {return null}
   else { playerColor = startZone.color }

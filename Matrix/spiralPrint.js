@@ -1,3 +1,14 @@
+function makeArrayOf(value, length) {
+  var arr = [], i = length;
+  while (i--) {
+    arr[i] = value;
+  }
+  return arr;
+}
+
+// makeArrayOf(0, 5); [0, 0, 0, 0, 0]
+// makeArrayOf('x', 3); ['x', 'x', 'x']
+
 // prints left to right rather than build and traverse
 var size = 21;
 
@@ -13,6 +24,7 @@ for (var h = 0; h < size; h++) {
                     line += (w % 2 === 0) ? "B" : " ";
                 }
             }
+
             else {
                 if (w >= h && w < size - h) {
                     line += " ";
