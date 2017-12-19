@@ -1,3 +1,5 @@
+// 
+
 var maxSubArray = function(nums) {
     //initialize all variables
     var localMax = nums[0];

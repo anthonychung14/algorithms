@@ -1,3 +1,6 @@
+/*
+    Given two sorted arrays, output a sorted, merged set of the two
+*/
 const arr1 = [2,5,7,9,10,11], arr2 = [1,10,12,13,15,17,22]
 
 function IntersectionArray(a1, a2) {

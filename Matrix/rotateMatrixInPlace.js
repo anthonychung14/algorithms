@@ -12,21 +12,27 @@ const matrix2 = [
  ];
 
  const rotateInPlace = (matrix) => {
-     const matrixDimension = matrix.length
+     const matrixDimension = matrix.length;
+
+
      for (let i = 0; i < matrixDimension; i++) {
-         for (let j = i; j < matrixDimension - i - 1; j++) {
+         for (let j = i; j < matrixDimension - 1 - i; j++) {
+
+
              const temp = matrix[i][j];
 
-             // right to top
+             // const right = matrix[j][matrixDimension - 1 - i];
+
+             // top now equals right
              matrix[i][j] = matrix[j][matrixDimension - 1 - i];
 
-             // bottom to right
+             // right now equals bottom
              matrix[y][matrixDimension - 1 - i] = matrix[matrixDimension - 1 - i][matrixDimension - 1 - j];
 
-             // left to bottom
+             // bottom now equals right
              matrix[y][matrixDimension - 1 - i] = matrix[matrixDimension - 1 - i][matrixDimension - 1 - j]
 
-             // temp to left
+             // left now equals temp
              matrix[matrixDimension - 1 - j][i] = temp
          }
      }

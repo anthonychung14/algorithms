@@ -1,3 +1,5 @@
+//
+
 function medianTwoSort(arr1, arr2) {
 
   //if m1 and m2 are equal, find their average
